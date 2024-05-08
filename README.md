@@ -1,1 +1,3 @@
 # road-segmentation
+
+This notebook uses a [UNet](https://arxiv.org/pdf/1505.04597v1) architecture for semantic segmentation. It consists of two processes: downsampling and upsampling. Downsampling involves a repeated application of the following sequence: 3x3 convolution layer, ReLU activation function, and 2x2 max-pooling; where at each repetition, the number of feature channels is doubled. Afterwards, upsampling is applied in which it applies an "up-convolution" that halves the number of feature channels, followed by a repeated application of 3x3 convolution and ReLU. In the code, Batch Normalization and Dropout was added to ensure better performance and accuracy.
